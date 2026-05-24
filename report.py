@@ -136,7 +136,7 @@ client = anthropic.Anthropic(api_key=API_KEY)
 def call_claude(prompt, label):
     print(f"[{TODAY_SLUG}] Fetching: {label}...")
     resp = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=4000,
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{"role": "user", "content": prompt}],
